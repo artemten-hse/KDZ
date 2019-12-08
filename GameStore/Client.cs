@@ -6,5 +6,6 @@ namespace GameStore
 {
     class Client
     {
+
     }
 }

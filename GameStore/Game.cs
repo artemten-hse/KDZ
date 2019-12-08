@@ -7,5 +7,6 @@ namespace GameStore
     public class Game
     {
         string Name { get; set; }
+        string Publisher { get; set; }
     }
 }
