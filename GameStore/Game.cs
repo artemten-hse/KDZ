@@ -4,7 +4,8 @@ using System.Text;
 
 namespace GameStore
 {
-    class Game
+    public class Game
     {
+        string Name { get; set; }
     }
 }
