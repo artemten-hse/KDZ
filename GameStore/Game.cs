@@ -6,6 +6,6 @@ namespace GameStore
 {
     public class Game
     {
-        string Name { get; set; }
+       public string Name { get; set; }
     }
 }
