@@ -16,8 +16,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock Name="TransactionsTextBlock" Grid.Row="0" Margin="15,15,15,15" FontSize="18" Grid.ColumnSpan="2">Transactions:</TextBlock>
-                    <DataGrid Name="TransactionsDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="50,50,50,50" Grid.ColumnSpan="2"></DataGrid>
+                    <TextBlock Name="OrderTextBlock" Grid.Row="0" Margin="15,15,15,15" FontSize="18" Grid.ColumnSpan="2">Orders:</TextBlock>
+                    <DataGrid Name="OrderDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="50,50,50,50" Grid.ColumnSpan="2"></DataGrid>
                 </Grid>
             </TabItem>
             <TabItem Header="Profit and popularity check">
