@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameStore", "GameStore\GameStore.csproj", "{1C5CEAA2-FC8A-4BA9-8661-A01590792E12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnerGUI", "OwnerGUI\OwnerGUI.csproj", "{1786B2BE-D77C-4051-9CED-6728F59E7282}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwnerGUI", "OwnerGUI\OwnerGUI.csproj", "{1786B2BE-D77C-4051-9CED-6728F59E7282}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C5CEAA2-FC8A-4BA9-8661-A01590792E12} = {1C5CEAA2-FC8A-4BA9-8661-A01590792E12}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
