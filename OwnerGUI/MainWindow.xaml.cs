@@ -43,9 +43,11 @@ namespace OwnerGUI
             OrderDataGrid.ItemsSource = repo.Orders;
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
+        private void PopularityButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var name = PopularityTextBox.Text;
+            int check = repo.PopularityCheckForGame(name);
+            MessageBox.Show($"Amount of {name} sold - {check}");
         }
     }
 }

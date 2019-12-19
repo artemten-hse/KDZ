@@ -4,8 +4,9 @@ using System.Text;
 
 namespace GameStore.Classes
 {
-    class GamePopularity : Game
+    public class GamePopularity : Game
     {
+        public int AmountSold { get; set; }
         public int PopularityRank { get; set; }
     }
 }

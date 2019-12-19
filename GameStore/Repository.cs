@@ -10,10 +10,10 @@ namespace GameStore
     public class Repository
     {
         public List<Client> Clients;
-        public List<Game> Games;
+        public List<GameOrder> Games;
         public List<Order> Orders;
         public List<Cashier> Cashiers;
-        public List<Game> Popularity;
+        public List<GamePopularity> Popularity;
 
         public Repository()
         {
@@ -52,7 +52,7 @@ namespace GameStore
         private void LoadData()
         {
             Clients = Deserialize<List<Client>>(ClientsFileName);
-            Games = Deserialize<List<Game>>(GamesFileName);
+            Games = Deserialize<List<GameOrder>>(GamesFileName);
             Orders = Deserialize<List<Order>>(OrdersFileName);
             Cashiers = Deserialize<List<Cashier>>(CashierFileName);
         }
@@ -70,6 +70,18 @@ namespace GameStore
             return profit;
         }
 
+        public int PopularityCheckForGame(string game)
+        {
+            int soldcheck = 0;
+            foreach (var element in Orders)
+            {
+                if (element.OrderList.Contains(game))
+                {
+                    soldcheck += 1;
+                }
+            }
+            return soldcheck;
+        }
 
     }
 }
