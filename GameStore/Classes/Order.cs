@@ -7,9 +7,9 @@ namespace GameStore.Classes
     public class Order
     {
         public DateTime OrderTime { get; set; }
-        public Client Client { get; set; }
-        public Cashier Cashier { get; set; }
-        public List<Game> OrderList;
+        public string Client { get; set; }
+        public string Cashier { get; set; }
+        public List<string> OrderList;
         public int TotalPrice { get; set; }
     }
 }
