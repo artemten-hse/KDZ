@@ -45,7 +45,7 @@ namespace GameStore
         }
 
         private const string GamesFileName = "data/Games.json";
-        private const string TransactionsFileName = "data/Transactions.json";
+        private const string TransactionsFileName = "data/Orders.json";
         private const string UsersFileName = "data/Clients.json";
 
 
