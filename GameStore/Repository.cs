@@ -13,6 +13,7 @@ namespace GameStore
         public List<Game> Games;
         public List<Order> Orders;
         public List<Cashier> Cashiers;
+        public List<Game> Popularity;
 
         public Repository()
         {
