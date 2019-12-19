@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameStore.Classes
 {
-    class Order
+    public class Order
     {
         public DateTime OrderTime { get; set; }
         public Client Client { get; set; }
