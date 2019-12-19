@@ -18,7 +18,6 @@ namespace GameStore
         {
            
         }
-
         private T Deserialize<T>(string fileName)
         {
             using (var sr = new StreamReader(fileName))

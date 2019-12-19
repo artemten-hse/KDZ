@@ -1,8 +1,10 @@
 ﻿[
   {
     "Name": "Иван Иванов",
+    "Email": "ivan@ivanov.ru"
   },
   {
     "Name": "Петр Петров",
+    "Email": "pert@petrov.com"
   }
 ]
