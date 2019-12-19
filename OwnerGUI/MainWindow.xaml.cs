@@ -41,13 +41,10 @@ namespace OwnerGUI
         {
             OrderDataGrid.ItemsSource = null;
             OrderDataGrid.ItemsSource = repo.Orders;
+            repo.PopularityCheckForGame();
+            PopularityDataGrid.ItemsSource = null;
+            PopularityDataGrid.ItemsSource = repo.Popularity;
         }
 
-        private void PopularityButton_Click(object sender, RoutedEventArgs e)
-        {
-            var name = PopularityTextBox.Text;
-            int check = repo.PopularityCheckForGame(name);
-            MessageBox.Show($"Amount of {name} sold - {check}");
-        }
     }
 }

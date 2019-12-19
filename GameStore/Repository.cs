@@ -13,7 +13,7 @@ namespace GameStore
         public List<GameOrder> Games;
         public List<Order> Orders;
         public List<Cashier> Cashiers;
-        public List<GamePopularity> Popularity;
+        public List<GamePopularity> Popularity = new List<GamePopularity>();
 
         public Repository()
         {
@@ -70,18 +70,24 @@ namespace GameStore
             return profit;
         }
 
-        public int PopularityCheckForGame(string game)
+        public void PopularityCheckForGame()
         {
+
             int soldcheck = 0;
             foreach (var element in Orders)
             {
-                if (element.OrderList.Contains(game))
+                foreach (var secondElement in Games)
                 {
-                    soldcheck += 1;
+                    if (element.OrderList.Contains(secondElement.Name))
+                    {
+                        string publisher = secondElement.Publisher;
+                        string game = secondElement.Name;
+                        string platform = secondElement.Platform;
+                        soldcheck += 1;
+                        Popularity.Add(new GamePopularity { Name = game, AmountSold = soldcheck, Publisher = publisher, Platform = platform });
+                    }
                 }
             }
-            return soldcheck;
         }
-
     }
 }

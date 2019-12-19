@@ -4,5 +4,11 @@
     "Publisher": "Bethesda",
     "AmountLeft": 100,
     "Platform": "PC"
+  },
+    {
+    "Name": "The Witcher 3: Wild Hunt",
+    "Publisher": "CD Projekt",
+    "AmountLeft": 100,
+    "Platform": "PC"
   }
 ]
