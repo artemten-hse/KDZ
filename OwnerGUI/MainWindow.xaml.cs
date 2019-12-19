@@ -42,5 +42,10 @@ namespace OwnerGUI
             OrderDataGrid.ItemsSource = null;
             OrderDataGrid.ItemsSource = repo.Orders;
         }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,18 +10,11 @@
         <TabControl>
             <TabItem Header="Transactions">
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="42*"/>
-                        <ColumnDefinition Width="130*"/>
-                        <ColumnDefinition Width="32*"/>
-                        <ColumnDefinition Width="11*"/>
-                        <ColumnDefinition Width="579*"/>
-                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBlock Name="OrderTextBlock" Grid.Row="0" Margin="15,15,15,15" FontSize="18" Grid.ColumnSpan="5">Orders:</TextBlock>
-                    <DataGrid Name="OrderDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="8,50,50,50" Grid.ColumnSpan="4" Grid.Column="1"></DataGrid>
+                    <DataGrid Name="OrderDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="50,50,50,50" Grid.ColumnSpan="4" Grid.Column="1"></DataGrid>
                 </Grid>
             </TabItem>
             <TabItem Header="Profit and popularity check">
@@ -32,8 +25,8 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="15*"/>
-                        <RowDefinition Height="15*"/>
-                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
                         <RowDefinition Height="15*"/>
                         <RowDefinition Height="45*"/>
                     </Grid.RowDefinitions>
