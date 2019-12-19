@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameStore
+namespace GameStore.Classes
 {
-    class Order
+    public class Cashier : Person
     {
+
     }
 }
