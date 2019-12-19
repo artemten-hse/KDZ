@@ -16,7 +16,7 @@ namespace GameStore
 
         public Repository()
         {
-            LoadData();
+
         }
         private T Deserialize<T>(string fileName)
         {
@@ -43,16 +43,24 @@ namespace GameStore
                 }
             }
         }
+
         private const string GamesFileName = "data/Games.json";
         private const string TransactionsFileName = "data/Orders.json";
         private const string UsersFileName = "data/Clients.json";
+        private const string CashierFileName = "data/Cashier.json";
 
-        private void LoadData() {
-            Orders = Deserialize<List<Order>>(TransactionsFileName);
-            Games = Deserialize<List<Game>>(GamesFileName);
-            Clients = Deserialize<List<Client>>(UsersFileName);
+        public decimal? GetProfitByDateGap(DateTime startDate, DateTime endDate)
+        {
+            decimal? profit = 0;
+            foreach (var element in Orders)
+            {
+                if (element.OrderTime >= startDate && element.OrderTime <= endDate)
+                {
+                    profit += element.TotalPrice;
+                }
+            }
+            return profit;
         }
-
 
 
     }
