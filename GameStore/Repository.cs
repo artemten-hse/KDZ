@@ -44,10 +44,10 @@ namespace GameStore
             }
         }
 
-        private const string GamesFileName = "data/Games.json";
-        private const string OrdersFileName = "data/Orders.json";
-        private const string ClientsFileName = "data/Clients.json";
-        private const string CashierFileName = "data/Cashier.json";
+        private const string GamesFileName = "Data/Games.json";
+        private const string OrdersFileName = "Data/Orders.json";
+        private const string ClientsFileName = "Data/Clients.json";
+        private const string CashierFileName = "Data/Cashier.json";
         private void LoadData()
         {
             Clients = Deserialize<List<Client>>(ClientsFileName);

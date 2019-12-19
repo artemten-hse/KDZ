@@ -1,6 +1,8 @@
-﻿{
-  "Name": "The Elder Scrolls V: Skyrim",
-  "Publisher": "Bethesda",
-  "AmountLeft": 100,
-  "Platform": "PC"
-}
+﻿[
+  {
+    "Name": "The Elder Scrolls V: Skyrim",
+    "Publisher": "Bethesda",
+    "AmountLeft": 100,
+    "Platform": "PC"
+  }
+]
