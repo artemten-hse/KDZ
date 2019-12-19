@@ -16,7 +16,7 @@ namespace GameStore
 
         public Repository()
         {
-           
+            LoadData();
         }
         private T Deserialize<T>(string fileName)
         {
@@ -43,10 +43,16 @@ namespace GameStore
                 }
             }
         }
-
         private const string GamesFileName = "data/Games.json";
-        private const string TransactionsFileName = "data/Orders.json";
-        private const string UsersFileName = "data/Clients.json";
+        private const string OrdersFileName = "data/Orders.json";
+        private const string ClientsFileName = "data/Clients.json";
+
+        private void LoadData() {
+            Orders = Deserialize<List<Order>>(OrdersFileName);
+            Games = Deserialize<List<Game>>(GamesFileName);
+            Clients = Deserialize<List<Client>>(ClientsFileName);
+        }
+
 
 
     }
