@@ -32,10 +32,19 @@ namespace OwnerGUI
 
         private void ProfitButton_Click(object sender, RoutedEventArgs e)
         {
-            DateTime startDate = Convert.ToDateTime(StarDateTextBox.Text);
-            DateTime endDate = Convert.ToDateTime(EndDateTextBox.Text);
+            DateTime? startDate = string.IsNullOrEmpty(StartDateTextBox.Text) ? (DateTime?)null : Convert.ToDateTime(StartDateTextBox.Text);
+            DateTime? endDate = string.IsNullOrEmpty(EndDateTextBox.Text) ? (DateTime?)null : Convert.ToDateTime(EndDateTextBox.Text);
             decimal? profit = repo.GetProfitByDateGap(startDate, endDate);
-            MessageBox.Show($"Your profit is {profit}");
+            if (startDate != null && endDate != null)
+            {
+                MessageBox.Show($"Your profit is {profit}");
+            }
+            else
+            {
+                MessageBox.Show("Please, choose the dates!");
+                return;
+            }
+
         }
 
         private void Orders()
@@ -54,7 +63,7 @@ namespace OwnerGUI
             var selectedOrder = OrderDataGrid.SelectedItem as Order;
             if (selectedOrder == null)
             {
-                MessageBox.Show("Необходимо выбрать заказ!");
+                MessageBox.Show("Please, choose the order!");
                 return;
             }
             var orderDetailsWindow = new OrderDetails(selectedOrder);
@@ -69,7 +78,7 @@ namespace OwnerGUI
             var selectedClient = clientDataGrid.SelectedItem as Client;
             if (selectedClient == null)
             {
-                MessageBox.Show("Необходимо выбрать клиента!");
+                MessageBox.Show("Please, choose the client!");
                 return;
             }
             var clientInfoWindow = new ClientInfoWindow(selectedClient);

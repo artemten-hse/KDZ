@@ -39,11 +39,16 @@ namespace OwnerGUI
             var selectedOrder = clientOrdersDataGrid.SelectedItem as Order;
             if (selectedOrder == null)
             {
-                MessageBox.Show("Необходимо выбрать заказ!");
+                MessageBox.Show("Please, choose the order!");
                 return;
             }
             var orderDetailsWindow = new OrderDetails(selectedOrder);
             orderDetailsWindow.ShowDialog();
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -24,5 +24,10 @@ namespace OwnerGUI
             InitializeComponent();
             detailsListBox.ItemsSource = order.OrderList;
         }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -30,20 +30,6 @@ namespace GameStore
             }
         }
 
-        private void Serialize<T>(string fileName, T data)
-        {
-            using (var sw = new StreamWriter(fileName))
-            {
-                using (var jsonWriter = new JsonTextWriter(sw))
-                {
-                    jsonWriter.Formatting = Formatting.Indented;
-
-                    var serializer = new JsonSerializer();
-                    serializer.Serialize(jsonWriter, data);
-                }
-            }
-        }
-
         private const string GamesFileName = "Data/Games.json";
         private const string OrdersFileName = "Data/Orders.json";
         private const string ClientsFileName = "Data/Clients.json";
@@ -56,7 +42,7 @@ namespace GameStore
             Cashiers = Deserialize<List<Cashier>>(CashierFileName);
         }
 
-        public decimal? GetProfitByDateGap(DateTime startDate, DateTime endDate)
+        public decimal? GetProfitByDateGap(DateTime? startDate, DateTime? endDate)
         {
             decimal? profit = 0;
             foreach (var element in Orders)

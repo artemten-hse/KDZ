@@ -8,12 +8,14 @@
         Title="ClientInfoWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Height="50" Grid.Row="0" FontSize="18" VerticalAlignment="Bottom" HorizontalAlignment="Center">Заказы клиента</TextBlock>
-        <DataGrid Name="clientOrdersDataGrid" Grid.Row="1" AutoGenerateColumns="True" Margin="50,50,50,50"></DataGrid>
-        <Button Name="clientOrderDetails" Margin="20" Grid.Row="2" Height="50" FontSize="18" Click="ClientOrderDetails_Click">Посмотреть дополнительную информацию о заказе</Button>
+        <TextBlock Height="20" Grid.Row="0" FontSize="18" VerticalAlignment="Bottom" Margin="15,0,15,15" >Client's orders</TextBlock>
+        <DataGrid Name="clientOrdersDataGrid" Grid.Row="1" AutoGenerateColumns="True" Margin="50,15,50,15"></DataGrid>
+        <Button Name="clientOrderDetails" Margin="50,5,50,5" Grid.Row="2" Height="30" FontSize="18" Click="ClientOrderDetails_Click">Show additional order information</Button>
+        <Button Name="OKButton" Grid.Column="1"  Grid.Row="3" HorizontalAlignment="Center" Margin="15,0,15, 0" FontSize="18" Height="30" Width="300" Click="OKButton_Click">OK</Button>
     </Grid>
 </Window>

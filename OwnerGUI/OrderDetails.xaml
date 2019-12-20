@@ -8,13 +8,12 @@
         Title="OrderDetails" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Height="50" Grid.Row="0" FontSize="18" VerticalAlignment="Bottom" HorizontalAlignment="Center">Содержание заказа</TextBlock>
-        <ListBox Name="detailsListBox" Margin="20" Grid.Row="1">
-            
-        </ListBox>
-        
+        <TextBlock Height="20" Grid.Row="0" FontSize="18" Margin="15,0,15,15" VerticalAlignment="Bottom">Order's content</TextBlock>
+        <ListBox Name="detailsListBox" Margin="50,0,50,0" Grid.Row="1"></ListBox>
+        <Button Name="OKButton" Grid.Row="3" HorizontalAlignment="Center" Margin="15,0,15, 0" FontSize="18" Height="30" Width="300" Click="OKButton_Click">OK</Button>
     </Grid>
 </Window>
