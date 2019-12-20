@@ -10,5 +10,11 @@
     "Publisher": "CD Projekt",
     "AmountLeft": 100,
     "Platform": "PC"
+  },
+  {
+    "Name": "Fallout 76",
+    "Publisher": "Bethesda",
+    "AmountLeft": 100,
+    "Platform": "PC"
   }
 ]

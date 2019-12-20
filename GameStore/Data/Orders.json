@@ -1,8 +1,16 @@
-﻿[  {
+﻿[ 
+  {
     "OrderTime": "2019-01-01T12:00:00",
     "Client": "Иван Иванов",
     "Cashier": "Тимур Говардов",
-    "OrderList": ["The Witcher 3: Wild Hunt", "The Elder Scrolls V: Skyrim", "The Witcher 3: Wild Hunt"],
+    "OrderList": ["Fallout 76", "Fallout 76", "Fallout 76"],
     "TotalPrice": 100
   },
+  {
+    "OrderTime": "2019-02-02T14:00:00",
+    "Client": "Петр Петров",
+    "Cashier": "Тимур Говардов",
+    "OrderList": ["The Witcher 3: Wild Hunt", "The Elder Scrolls V: Skyrim", "The Witcher 3: Wild Hunt"],
+    "TotalPrice": 150
+  }
 ]
