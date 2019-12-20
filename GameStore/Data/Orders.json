@@ -12,5 +12,12 @@
     "Cashier": "Тимур Говардов",
     "OrderList": ["The Witcher 3: Wild Hunt", "The Elder Scrolls V: Skyrim", "The Witcher 3: Wild Hunt"],
     "TotalPrice": 150
+  }, 
+  {
+    "OrderTime": "2019-01-01T15:00:00",
+    "Client": "Иван Иванов",
+    "Cashier": "Тимур Говардов",
+    "OrderList": ["The Elder Scrolls V: Skyrim"],
+    "TotalPrice": 100
   }
 ]

@@ -45,30 +45,8 @@ namespace OwnerGUI
             repo.PopularityCheckForGame();
             PopularityDataGrid.ItemsSource = null;
             PopularityDataGrid.ItemsSource = repo.Popularity;
-            
             clientDataGrid.ItemsSource = null;
             clientDataGrid.ItemsSource = repo.Clients;
-        }
-
-        public static void SortDataGrid(DataGrid dataGrid, ListSortDirection sortDirection = ListSortDirection.Descending)
-        {
-            var column = dataGrid.Columns[0];
-
-            // Clear current sort descriptions
-            dataGrid.Items.SortDescriptions.Clear();
-
-            // Add the new sort description
-            dataGrid.Items.SortDescriptions.Add(new SortDescription(column.SortMemberPath, sortDirection));
-
-            // Apply sort
-            foreach (var col in dataGrid.Columns)
-            {
-                col.SortDirection = null;
-            }
-            column.SortDirection = sortDirection;
-
-            // Refresh items to display sort
-            dataGrid.Items.Refresh();
         }
 
         private void OrderDetailButton_Click(object sender, RoutedEventArgs e)
