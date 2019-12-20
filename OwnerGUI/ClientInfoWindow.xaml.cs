@@ -33,5 +33,17 @@ namespace OwnerGUI
             }
             clientOrdersDataGrid.ItemsSource = clientOrders;
         }
+
+        private void clientOrderDetails_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedOrder = clientOrdersDataGrid.SelectedItem as Order;
+            if (selectedOrder == null)
+            {
+                MessageBox.Show("Необходимо выбрать заказ!");
+                return;
+            }
+            var orderDetailsWindow = new OrderDetails(selectedOrder);
+            orderDetailsWindow.ShowDialog();
+        }
     }
 }
