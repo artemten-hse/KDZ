@@ -10,6 +10,6 @@ namespace GameStore.Classes
         public string Client { get; set; }
         public string Cashier { get; set; }
         public List<string> OrderList;
-        public int TotalPrice { get; set; }
+        public decimal? TotalPrice { get; set; }
     }
 }

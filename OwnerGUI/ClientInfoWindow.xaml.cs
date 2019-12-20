@@ -34,7 +34,7 @@ namespace OwnerGUI
             clientOrdersDataGrid.ItemsSource = clientOrders;
         }
 
-        private void clientOrderDetails_Click(object sender, RoutedEventArgs e)
+        private void ClientOrderDetails_Click(object sender, RoutedEventArgs e)
         {
             var selectedOrder = clientOrdersDataGrid.SelectedItem as Order;
             if (selectedOrder == null)
