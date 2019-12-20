@@ -69,6 +69,7 @@ namespace OwnerGUI
             if (selectedClient == null)
             {
                 MessageBox.Show("Необходимо выбрать клиента!");
+                return;
             }
             var clientInfoWindow = new ClientInfoWindow(selectedClient);
             if (clientInfoWindow.ShowDialog() == true)
