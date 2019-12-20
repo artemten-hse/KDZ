@@ -14,8 +14,8 @@
                         <RowDefinition/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Name="OrderTextBlock" Grid.Row="0" Margin="15,15,15,15" FontSize="18">Orders:</TextBlock>
-                    <DataGrid Name="OrderDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="50,50,50,10"></DataGrid>
+                    <TextBlock Name="OrderTextBlock" Grid.Row="0" Margin="15,5,15,15" FontSize="18">Orders:</TextBlock>
+                    <DataGrid Name="OrderDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="50,30,50,5"></DataGrid>
                     <Button Name="orderDetailButton" Margin="50,15,50,15" Height="40" Grid.Row="1" FontSize="18" Click="OrderDetailButton_Click">Посмотреть дополнительную информацию о заказе</Button>
                 </Grid>
             </TabItem>
@@ -29,7 +29,7 @@
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="15*"/>
                         <RowDefinition Height="15*"/>
-                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="10*"/>
                         <RowDefinition Height="50*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="0"  Grid.Row="0" Margin="15,5,15,15" VerticalAlignment="Center" FontSize="18">Profit calculator:</TextBlock>
@@ -37,8 +37,8 @@
                     <TextBox Name="StarDateTextBox" Grid.Column="2"  Grid.Row="1" VerticalAlignment="Center" Margin="15,5,15, 20" FontSize="18" ></TextBox>
                     <TextBlock Grid.Column="0"  Grid.Row="2" Margin="15,5,15, 20" VerticalAlignment="Center" FontSize="18">End date in yyyy-mm-dd format:</TextBlock>
                     <TextBox Name="EndDateTextBox" Grid.Column="1"  Grid.Row="2" VerticalAlignment="Center" Margin="15,5,15, 20" FontSize="18" ></TextBox>
-                    <Button Name="ProfitButton" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" Margin="15,5,15, 20" FontSize="18" Height="30" Width="200" Click="ProfitButton_Click">Calculate profit</Button>
-                    <TextBlock Grid.Column="0"  Grid.Row="4" Margin="15,0,15, 20" FontSize="18">Popularity Check:</TextBlock>
+                    <Button Name="ProfitButton" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" Margin="15,0,15, 0" FontSize="18" Height="30" Width="200" Click="ProfitButton_Click">Calculate profit</Button>
+                    <TextBlock Grid.Column="0"  Grid.Row="4" Margin="15,0,15, 0" FontSize="18">Popularity Check:</TextBlock>
                     <DataGrid Name="PopularityDataGrid" Grid.Row="4"  AutoGenerateColumns="True" Margin="50,25,50,10" Grid.ColumnSpan="2"></DataGrid>
                 </Grid>
             </TabItem>
