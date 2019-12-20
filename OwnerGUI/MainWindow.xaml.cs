@@ -44,6 +44,8 @@ namespace OwnerGUI
             repo.PopularityCheckForGame();
             PopularityDataGrid.ItemsSource = null;
             PopularityDataGrid.ItemsSource = repo.Popularity;
+            clientDataGrid.ItemsSource = null;
+            clientDataGrid.ItemsSource = repo.Clients;
         }
 
         private void orderDetailButton_Click(object sender, RoutedEventArgs e)
@@ -56,6 +58,20 @@ namespace OwnerGUI
             }
             var orderDetailsWindow = new OrderDetails(selectedOrder);
             if (orderDetailsWindow.ShowDialog() == true)
+            {
+                Orders();
+            }
+        }
+
+        private void clientInfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedClient = clientDataGrid.SelectedItem as Client;
+            if (selectedClient == null)
+            {
+                MessageBox.Show("Необходимо выбрать клиента!");
+            }
+            var clientInfoWindow = new ClientInfoWindow(selectedClient);
+            if (clientInfoWindow.ShowDialog() == true)
             {
                 Orders();
             }

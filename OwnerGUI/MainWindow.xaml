@@ -42,6 +42,16 @@
                     <DataGrid Name="PopularityDataGrid" Grid.Row="4"  AutoGenerateColumns="True" Margin="50,50,50,10" Grid.ColumnSpan="2"></DataGrid>
                 </Grid>
             </TabItem>
+            <TabItem Header="Client info">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="clientDataGrid" Grid.Row="0" AutoGenerateColumns="True" Margin="50,50,50,50"></DataGrid>
+                    <Button Name="clientInfoButton" Margin="20" Grid.Row="1" Height="50" FontSize="18" Click="clientInfoButton_Click">Информация о заказах клиента</Button>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
