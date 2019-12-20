@@ -44,7 +44,7 @@ namespace OwnerGUI
             OrderDataGrid.ItemsSource = repo.Orders;
             repo.PopularityCheckForGame();
             PopularityDataGrid.ItemsSource = null;
-            PopularityDataGrid.ItemsSource = repo.Popularity;
+            PopularityDataGrid.ItemsSource = repo.Games;
             clientDataGrid.ItemsSource = null;
             clientDataGrid.ItemsSource = repo.Clients;
         }

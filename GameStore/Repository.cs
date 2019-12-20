@@ -10,10 +10,9 @@ namespace GameStore
     public class Repository
     {
         public List<Client> Clients;
-        public List<GameOrder> Games;
+        public List<Game> Games;
         public List<Order> Orders;
         public List<Cashier> Cashiers;
-        public List<GamePopularity> Popularity = new List<GamePopularity>();
 
         public Repository()
         {
@@ -52,7 +51,7 @@ namespace GameStore
         private void LoadData()
         {
             Clients = Deserialize<List<Client>>(ClientsFileName);
-            Games = Deserialize<List<GameOrder>>(GamesFileName);
+            Games = Deserialize<List<Game>>(GamesFileName);
             Orders = Deserialize<List<Order>>(OrdersFileName);
             Cashiers = Deserialize<List<Cashier>>(CashierFileName);
         }
@@ -72,19 +71,13 @@ namespace GameStore
 
         public void PopularityCheckForGame()
         {
-
-            int soldcheck = 0;
             foreach (var element in Orders)
             {
                 foreach (var secondElement in Games)
                 {
                     if (element.OrderList.Contains(secondElement.Name))
                     {
-                        string publisher = secondElement.Publisher;
-                        string game = secondElement.Name;
-                        string platform = secondElement.Platform;
-                        soldcheck += 1;
-                        Popularity.Add(new GamePopularity { Name = game, AmountSold = soldcheck, Publisher = publisher, Platform = platform });
+                        secondElement.AmountSold += element.OrderList.Count(x => x == secondElement.Name);
                     }
                 }
             }
