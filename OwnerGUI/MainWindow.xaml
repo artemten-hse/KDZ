@@ -12,9 +12,11 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <TextBlock Name="OrderTextBlock" Grid.Row="0" Margin="15,15,15,15" FontSize="18">Orders:</TextBlock>
                     <DataGrid Name="OrderDataGrid" Grid.Row="0"  AutoGenerateColumns="True" Margin="50,50,50,50"></DataGrid>
+                    <Button Name="orderDetailButton" Margin="20" Height="50" Grid.Row="1" FontSize="18" Click="orderDetailButton_Click">Посмотреть дополнительную информацию о заказе</Button>
                 </Grid>
             </TabItem>
             <TabItem Header="Profit and popularity check">

@@ -46,5 +46,19 @@ namespace OwnerGUI
             PopularityDataGrid.ItemsSource = repo.Popularity;
         }
 
+        private void orderDetailButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedOrder = OrderDataGrid.SelectedItem as Order;
+            if (selectedOrder == null)
+            {
+                MessageBox.Show("Необходимо выбрать заказ!");
+                return;
+            }
+            var orderDetailsWindow = new OrderDetails(selectedOrder);
+            if (orderDetailsWindow.ShowDialog() == true)
+            {
+                Orders();
+            }
+        }
     }
 }
